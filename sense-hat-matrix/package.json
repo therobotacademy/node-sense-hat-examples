@@ -1,0 +1,23 @@
+{
+  "name": "sense-hat-matrix",
+  "version": "1.0.0",
+  "description": "Testing Sense Hat LED matrix with node\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "node sample.js",
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aonghusonia/sense-hat-led.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aonghusonia/sense-hat-led/issues"
+  },
+  "homepage": "https://github.com/aonghusonia/sense-hat-led#readme",
+  "dependencies": {
+    "sense-hat-led": "^1.0.1"
+  }
+}
