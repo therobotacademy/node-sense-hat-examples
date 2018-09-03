@@ -1,0 +1,323 @@
+[{
+  "id": "9948c7f9.60f4b8",
+  "type": "debug",
+  "z": "12198e68.728d92",
+  "name": "",
+  "active": true,
+  "tosidebar": true,
+  "console": false,
+  "tostatus": false,
+  "complete": "payload",
+  "x": 1174.1667785644531,
+  "y": 316.0000886917114,
+  "wires": []
+}, {
+  "id": "5e85c298.7c017c",
+  "type": "function-npm",
+  "z": "12198e68.728d92",
+  "name": "flash message",
+  "func": "var sense = require('sense-hat-led');\nvar flashSpeed = 0.2;\n\nsense.flashMessage(\"One small step for Pi!\", flashSpeed);\n\nfunction done(){\n  console.log(\"finished message\")\n}\n\nreturn msg;",
+  "outputs": 1,
+  "noerr": 0,
+  "x": 901.5000228881836,
+  "y": 278.0000476837158,
+  "wires": [
+    ["9948c7f9.60f4b8"]
+  ]
+}, {
+  "id": "9bfd1e27.48ab9",
+  "type": "comment",
+  "z": "12198e68.728d92",
+  "name": "node-red-contrib-function-npm",
+  "info": "",
+  "x": 559.5000152587891,
+  "y": 181.0000057220459,
+  "wires": []
+}, {
+  "id": "d22e5c04.4db3",
+  "type": "inject",
+  "z": "12198e68.728d92",
+  "name": "",
+  "topic": "",
+  "payload": "hola de nuevo",
+  "payloadType": "str",
+  "repeat": "",
+  "crontab": "",
+  "once": false,
+  "onceDelay": 0.1,
+  "x": 675.0000152587891,
+  "y": 404.0000114440918,
+  "wires": [
+    ["aa16bb6.0752e48", "9948c7f9.60f4b8"]
+  ]
+}, {
+  "id": "c9a5eb41.e09be8",
+  "type": "inject",
+  "z": "12198e68.728d92",
+  "name": "",
+  "topic": "",
+  "payload": "90",
+  "payloadType": "num",
+  "repeat": "",
+  "crontab": "",
+  "once": false,
+  "onceDelay": 0.1,
+  "x": 169.00003242492676,
+  "y": 427.0000910758972,
+  "wires": [
+    ["ab6b39e0.4eef38"]
+  ]
+}, {
+  "id": "9420cf8d.79f72",
+  "type": "inject",
+  "z": "12198e68.728d92",
+  "name": "",
+  "topic": "",
+  "payload": "180",
+  "payloadType": "num",
+  "repeat": "",
+  "crontab": "",
+  "once": false,
+  "onceDelay": 0.1,
+  "x": 168.00003242492676,
+  "y": 460.0000910758972,
+  "wires": [
+    ["ab6b39e0.4eef38"]
+  ]
+}, {
+  "id": "6be4c6d7.048b38",
+  "type": "inject",
+  "z": "12198e68.728d92",
+  "name": "",
+  "topic": "",
+  "payload": "0",
+  "payloadType": "num",
+  "repeat": "",
+  "crontab": "",
+  "once": false,
+  "onceDelay": 0.1,
+  "x": 171.00003242492676,
+  "y": 393.0000910758972,
+  "wires": [
+    ["ab6b39e0.4eef38"]
+  ]
+}, {
+  "id": "3c2dea07.6e3726",
+  "type": "inject",
+  "z": "12198e68.728d92",
+  "name": "",
+  "topic": "",
+  "payload": ".clear(255,0,255)",
+  "payloadType": "str",
+  "repeat": "",
+  "crontab": "",
+  "once": false,
+  "onceDelay": 0.1,
+  "x": 637.0000152587891,
+  "y": 706.0001039505005,
+  "wires": [
+    ["ab7f02db.88495"]
+  ]
+}, {
+  "id": "f524ea75.e56ff8",
+  "type": "inject",
+  "z": "12198e68.728d92",
+  "name": "Flip horizontal",
+  "topic": "",
+  "payload": "FH",
+  "payloadType": "str",
+  "repeat": "",
+  "crontab": "",
+  "once": false,
+  "onceDelay": 0.1,
+  "x": 1146.0000305175781,
+  "y": 559.0000190734863,
+  "wires": [
+    ["4698ad4c.b5aea4"]
+  ]
+}, {
+  "id": "6bfa045a.36a61c",
+  "type": "inject",
+  "z": "12198e68.728d92",
+  "name": "Flip vertical",
+  "topic": "",
+  "payload": "FV",
+  "payloadType": "str",
+  "repeat": "",
+  "crontab": "",
+  "once": false,
+  "onceDelay": 0.1,
+  "x": 1144.5000305175781,
+  "y": 589.0000190734863,
+  "wires": [
+    ["e6a90611.d146a8"]
+  ]
+}, {
+  "id": "c45ec74f.523008",
+  "type": "inject",
+  "z": "12198e68.728d92",
+  "name": "clear",
+  "topic": "",
+  "payload": ".clear()",
+  "payloadType": "str",
+  "repeat": "",
+  "crontab": "",
+  "once": false,
+  "onceDelay": 0.1,
+  "x": 613.5000076293945,
+  "y": 671.0001049041748,
+  "wires": [
+    ["8b2e41fb.3f4ef"]
+  ]
+}, {
+  "id": "aa16bb6.0752e48",
+  "type": "function-npm",
+  "z": "12198e68.728d92",
+  "name": ".showMessage",
+  "func": "var sense = require('sense-hat-led');\nvar scrollSpeed = 0.05;\n\nsense.showMessage(msg.payload, scrollSpeed, [255, 255, 255]);\n\nreturn msg;",
+  "outputs": 1,
+  "noerr": 0,
+  "x": 887.0001068115234,
+  "y": 405.0000925064087,
+  "wires": [
+    ["9948c7f9.60f4b8"]
+  ]
+}, {
+  "id": "3d21017b.8ba5ee",
+  "type": "inject",
+  "z": "12198e68.728d92",
+  "name": "",
+  "topic": "",
+  "payload": "",
+  "payloadType": "date",
+  "repeat": "",
+  "crontab": "",
+  "once": false,
+  "onceDelay": 0.1,
+  "x": 661.1666870117188,
+  "y": 276.0000476837158,
+  "wires": [
+    ["5e85c298.7c017c"]
+  ]
+}, {
+  "id": "172155a0.102c3a",
+  "type": "comment",
+  "z": "12198e68.728d92",
+  "name": "'scrollSpeed' set to 0.05",
+  "info": "",
+  "x": 683.5,
+  "y": 334,
+  "wires": []
+}, {
+  "id": "4698ad4c.b5aea4",
+  "type": "function-npm",
+  "z": "12198e68.728d92",
+  "name": ".flipH",
+  "func": "var sense = require('sense-hat-led');\nsense.flipH();\n\nreturn msg;",
+  "outputs": 1,
+  "noerr": 0,
+  "x": 1363.0000534057617,
+  "y": 555.0000400543213,
+  "wires": [
+    []
+  ]
+}, {
+  "id": "cfa45412.fcd488",
+  "type": "inject",
+  "z": "12198e68.728d92",
+  "name": "",
+  "topic": "",
+  "payload": "270",
+  "payloadType": "num",
+  "repeat": "",
+  "crontab": "",
+  "once": false,
+  "onceDelay": 0.1,
+  "x": 169.00003242492676,
+  "y": 497.0000910758972,
+  "wires": [
+    ["ab6b39e0.4eef38"]
+  ]
+}, {
+  "id": "ab6b39e0.4eef38",
+  "type": "function-npm",
+  "z": "12198e68.728d92",
+  "name": "rotateMessage",
+  "func": "var sense = require('sense-hat-led');\n\nsense.setRotation(msg.payload);\n\nreturn msg;",
+  "outputs": 1,
+  "noerr": 0,
+  "x": 408.00003242492676,
+  "y": 444.0000910758972,
+  "wires": [
+    []
+  ]
+}, {
+  "id": "e6a90611.d146a8",
+  "type": "function-npm",
+  "z": "12198e68.728d92",
+  "name": ".flipV",
+  "func": "var sense = require('sense-hat-led');\nsense.flipV();\n\nreturn msg;",
+  "outputs": 1,
+  "noerr": 0,
+  "x": 1362.0000534057617,
+  "y": 594.0000419616699,
+  "wires": [
+    []
+  ]
+}, {
+  "id": "38e2384e.b510d8",
+  "type": "function-npm",
+  "z": "12198e68.728d92",
+  "name": ".showLetter",
+  "func": "var sense = require('sense-hat-led');\n\nsense.showLetter(msg.payload);\n\nreturn msg;",
+  "outputs": 1,
+  "noerr": 0,
+  "x": 873.0000190734863,
+  "y": 538.0000171661377,
+  "wires": [
+    []
+  ]
+}, {
+  "id": "6da347de.037148",
+  "type": "inject",
+  "z": "12198e68.728d92",
+  "name": "",
+  "topic": "",
+  "payload": "e",
+  "payloadType": "str",
+  "repeat": "",
+  "crontab": "",
+  "once": false,
+  "onceDelay": 0.1,
+  "x": 653.0000190734863,
+  "y": 538.0000171661377,
+  "wires": [
+    ["38e2384e.b510d8"]
+  ]
+}, {
+  "id": "8b2e41fb.3f4ef",
+  "type": "function-npm",
+  "z": "12198e68.728d92",
+  "name": ".clear",
+  "func": "var sense = require('sense-hat-led').sync;\n\nsense.clear();\n\nreturn msg;",
+  "outputs": 1,
+  "noerr": 0,
+  "x": 849,
+  "y": 664.0000877380371,
+  "wires": [
+    []
+  ]
+}, {
+  "id": "ab7f02db.88495",
+  "type": "function-npm",
+  "z": "12198e68.728d92",
+  "name": ".clear(color)",
+  "func": "var sense = require('sense-hat-led').sync;\n\nsense.clear(255,0,255);\n\nreturn msg;",
+  "outputs": 1,
+  "noerr": 0,
+  "x": 867.0000095367432,
+  "y": 701.0001029968262,
+  "wires": [
+    []
+  ]
+}]
