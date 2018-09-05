@@ -5,6 +5,7 @@ Directory: wia-wether-device
 Using WIA.io IoT platform: register a device, get the secret key and inject into 'index.js'
 Then run:
 ```
+npm install
 node index.js
 ```
 
@@ -13,6 +14,7 @@ https://github.com/aonghusonia/sense-hat-led
 
 Coloring a pixel (sample.js):
 ```
+npm install
 npm start
 ```
 
